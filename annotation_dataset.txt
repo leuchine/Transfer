@@ -1,0 +1,50 @@
+3292
+_______/*!  * Base CSS for pdf2htmlEX * Copyright 2012,2013 Lu Wang &lt;coolwanglu@gmail.com&gt;  * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;padding:0;margin:0;overflow:auto
+3293
+______________________________________/*!  * Base CSS for pdf2htmlEX * Copyright 2012,2013 Lu Wang &lt;coolwanglu@gmail.com&gt;  * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;p
+3295
+There are literally dozens of Hawker Centers and Food Courts throughout Singapore and most of them are pretty good, but the ones on this list are exceptionally good (and you can also find particular stall recommendations in each of the recommended centres)
+3297
+qualifying tuple from the secondary index IN, and another to fetchthe relevant tuple from the primary index). In absolute terms, ICresults in a better execution plan compared to that of IN. How-ever, the execution plan that uses INis only slightly less efﬁ
+3298
+Our design approach has been to provide a simple constraint lan-guage that covers a signiﬁcant fraction of interesting scenarios (in-cluding all the motivating examples in the previous section). Wealso provide a lower-level interface to specify more elabor
+3301
+Given a huge real graph, how can we derive a representa-tive sample? There are many known algorithms to computeinteresting measures (shortest paths, centrality, between-ness, etc.), but several of them become impractical for largegraphs. Thus graph samplin
+3304
+ere, obviously, is unpretentious and there is nothing much in the way of glitzy décor or perfect table settings... On the other hand, you are in Singapore, which means you are not likely to find a place that is too messy or rowdy... (Not to mention filthy)
+3305
+l graph G? Or, do we want th e sample S tobe similar to what the graph G looked like back in the timewhen it had the size of S? We refer to the former goal asScale-down goal, and to the latter as Back-in-time goal.Next issue is to deﬁn e a list of graph pr
+3306
+We perform a systematic evaluation of sampling algo-rithms, introducing non-trivial statistical evaluation meth-ods (the Kolmogorov-Smirnov D-statistic and random walkinspired ideas), th at go beyond simple eye-balling.Best performing sampling methods are
+3307
+compute the n-match difference of every point and returnthe top k answers. The frequent k-n-match query can bedone similarly. We just need to maintain a top k answer setfor each n value required by the query while checking everypoint. However, the naive algorithm is expensive since wehave to scan the whole database and hence every attributeof every point is accessed. In this paper we propose an al-gorithm that works on a different organization of the dataobjects, namely, each dimension of the data set is sorted.Our algorithm accesses the attributes in each dimension inascending order of their differences to the query in corre-sponding dimensions. We call it the ascending difference(AD) algorithm. We prove that the AD algorithm is optimalfor both query types in terms of the number of individualattributes retrieved given our data organization. Our modelof organizing data as sorted dimensions and using numberof attributes retrieved as cost measure matches very well thesetting of information retrieval from multiple systems [11].Our cost measure also conforms with the cost model of diskbased algorithms, where the number of disk accesses is themajor measure of performance, and the number of disk ac-cesses is proportional to the attributes retrieved. So we alsoapply our algorithmic strategy to achieve an efficient diskbased algorithm.
+3308
+It’s everywhere -- at hawker stalls, food courts, luxury hotels and even at the zoo, but Singaporeans just can’t get enough of it. Chicken rice is often called the “national dish” of Singapore. Steamed or boiled chicken is served atop fragrant oily rice, w
+3309
+1. Chicken rice It’s everywhere -- at hawker stalls, food courts, luxury hotels and even at the zoo, but Singaporeans just can’t get enough of it. Chicken rice is often called the “national dish” of Singapore. Steamed or boiled chicken is served atop fragr
+3310
+Similarity search is a crucial task in many multimedia and
+3311
+better result than kNN search, but it also depends on agood choice of n. This motivates the use of the frequent k-n-match query, which returns objects that have many partialmatches with the query object.
+3312
+better result than kNN search, but it also depends on agood choice of n. This motivates the use of the frequent k-n-match query, which returns objects that have many partialmatches with the query object.
+3313
+from objects some features such as image colors [14], shapes[17] and texts [19], and then use nearest neighbor queries tosearch similar objects [10, 14]. In the last decade, manystructures and algorithms have been proposed aiming ataccelerating the processing of (k) nearest neighbor queries.Early methods are based on R-tree-like structures such asthe SS-tree [22] and the X-tree [7]. However, the R-tree-likestructures all suffer from the “dimensionality curse”, that is,their performance deteriorates dramatically as dimensional-ity becomes high. [21] has shown this phenomenon bothanalytically and experimentally. Therefore, the authors of[21] proposed an algorithm based on compression, called thevector approximation-file (VA-file) to accelerate sequentialscan.
+3314
+or the nearest neighbor
+3315
+attributes retrieved given our data organization. Our model
+3316
+Efficiency
+3317
+INTRODUCTION
+3318
+PROBLEM
+3319
+PROBLEM FORMULATION
+3321
+issue is to deﬁn e a list of graph properties that weshould aim for. The properties would be, say, the shape ofthe degree distribution should be heavy tailed; small diam-eter, etc. Our goal here is not t o ﬁnd a sampling procedureand the corresponding (un
+3322
+Assuming we use Random Walk (RW) sampling for Scale-down and Forest Fire (FF) sampling for Back-in-time goal,with moderate sampling sizes (≈ 25%), we ﬁnd t he scalingrules shown in table 2. Most of t hem are very simple, sincethe sampling does a good job o
+3325
+Figure 2(a) plots the Densiﬁcation Power Law. Againnotice 3 types of behavior. RW and RDN give too densegraphs, edge selection techniques (RE, RNE and HY B) re-sult in too sparse graphs that start to rapidly ﬁll-in themissing edges when the sample size get

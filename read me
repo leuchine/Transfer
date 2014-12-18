@@ -1,0 +1,44 @@
+Command line:
+1. export as .jar
+2. initialize master 
+   java -jar Master.jar socket://localhost:1111
+3. initialize server
+   java -jar Server.jar socket://localhost:2222
+4. index:
+   java -jar Client.jar -index filename(containing annotation) index_file
+   search:
+   java -jar Client.jar -search queryString index_file 
+
+eclipse：
+comment the following part in readpeer.client:
+/*if (args[0].equals("-index")) {
+	//System.out.println("building...");
+	try {
+		client.testInsertion(args[1], args[2]);
+	} catch (Throwable e) {
+		System.out.println(Messager.INSERTION_FAIL);
+		e.printStackTrace();
+		System.exit(-1);
+	}
+	//System.out.println("building...Done: " + (System.currentTimeMillis() - start));
+}else if (args[0].equals("-search")) {
+	if (args.length > 3 ) {
+		K = Integer.valueOf(args[3]);
+	}
+			
+	client.testQuery(args[1], args[2], K);
+}*/
+
+set the run configuration
+1.readpeer.Master: program arguments: socket://localhost:1111
+2.readpeer.Server: program arguments: socket://localhost:2222
+
+run master.java first, then server.java
+use client.testInsertion(filename,index_file)
+or client.testQuery(queryString, index_file, 5)
+(K is not important here.)
+run client.java
+
+The file 2 is the sample annotation file.
+Each annotation is of length 256 and one single annotation should only be indexed once
+
