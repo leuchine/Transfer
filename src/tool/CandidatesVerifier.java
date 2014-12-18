@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -106,6 +107,7 @@ public class CandidatesVerifier {
 	private static void verifyFirstPartDominated(SearchQuery query,
 			HashMap<Long, Double> cosTable,
 			HashMap<Long, IntegerPair> annoPosMap, Long annoId, int segID) {
+			
 		TermVector<Integer> firstAnnoVector = query.annos.get(0).get(annoId);
 		TermVector<Integer> secondAnnoVector = query.annos.get(1).get(annoId);
 		
@@ -116,6 +118,14 @@ public class CandidatesVerifier {
 				query.words);
 		
 		double cosValue = TermVector.getCosValue(minCover, annoVector);
+		if(annoId==949){
+			System.out.println(query.querySegs.get(segID));
+			System.out.println(query.querySegs.get(segID+1));
+			System.out.println(Arrays.toString(query.words));
+			System.out.println("first:"+cosValue);
+			System.out.println("min:"+minCover);
+			System.out.println("anno:"+annoVector);
+		}
 		if (cosValue >= cosBound) {
 			updateResults(cosTable, annoPosMap, annoId, cosValue,
 					query.segPos.get(minCover.startPos),

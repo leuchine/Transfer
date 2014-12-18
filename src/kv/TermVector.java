@@ -157,6 +157,7 @@ public class TermVector<T> implements Serializable {
 
 	public TermVector<T> getMinCover(TermVector<T> start, TermVector<T> end,
 			T words[]) {
+		
 		TermVector<T> result = new TermVector<T>();
 		Iterator<Entry<T, Integer>> iterator = this.keyFreqMap.entrySet()
 				.iterator();
@@ -169,13 +170,19 @@ public class TermVector<T> implements Serializable {
 			if (start.firstOccur.containsKey(key)
 					&& min > start.firstOccur.get(key)) {
 				min = start.firstOccur.get(key);
+			}else if(end.firstOccur.containsKey(key)
+					&& min > end.firstOccur.get(key)){
+				min=end.firstOccur.get(key);
 			}
 
 			if (end.lastOccur.containsKey(key) && max < end.lastOccur.get(key)) {
 				max = end.lastOccur.get(key);
+			}else if(start.lastOccur.containsKey(key) && max < start.lastOccur.get(key)) {
+				max = start.lastOccur.get(key);
 			}
+			
+			
 		}
-
 		for (int i = min; i <= max; i++) {
 			result.addWord(words[i]);
 		}
@@ -210,10 +217,10 @@ public class TermVector<T> implements Serializable {
 
 		while (iterator.hasNext()) {
 			Entry<Integer, Integer> entry = iterator.next();
-
-			if (!query.keyFreqMap.containsKey(entry.getKey())) {
-				return -1;
-			}
+//
+//			if (!query.keyFreqMap.containsKey(entry.getKey())) {
+//				return -1;
+//			}
 		}
 
 		iterator = query.keyFreqMap.entrySet().iterator();

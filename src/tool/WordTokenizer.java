@@ -176,7 +176,7 @@ public class WordTokenizer {
 //				System.out.println();
 				totalLen = pos;
 				segID++;
-//				 System.out.println(segID);
+//				System.out.println(segID);
 				query.querySegs.add(new TermVector<Integer>());
 				query.halfSegVector.add(new TermVector<Integer>());
 				query.halfSegVector.add(new TermVector<Integer>());
